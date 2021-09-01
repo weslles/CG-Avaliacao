@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Algoritmo Bresenham</title>
+    <style>
+        body {
+            background: darkgray
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #112A46;
+        }
+
+        svg {
+            position: relative;
+            background: #ACC8E5;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="bresenham.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    </link>
+    <link rel="stylesheet" href="css/custom.css">
+    </link>
+</head>
+
+<body class="p-5 row">
+    <div class="col-6">
+        <div class="container">
+            <h2 class="mb-4">Algoritmo Bresenham</h2>
+        </div>
+
+        <svg width="400" height="400">
+            <g id="svg" class="y axis">
+                <line x1="200" y1="0" x2="200" y2="400"></line> <!-- Eixo Y -->
+                <line x1="0" y1="200" x2="400" y2="200"></line> <!-- Eixo X -->
+                <!-- Linha de Gráfico -->
+                <line class="grafico" x1="200" y1="200" x2="200" y2="200" style="stroke:rgb(0, 0, 0)"></line>
+            </g>
+        </svg>
+    </div>
+
+    <div class="col-6 d-flex align-items-center">
+        <div class="well p-3 border border-dark" style="margin-left: 50px;">
+            <h2> Inserir Coordenadas</h2>
+            <label>Coordenada Ponto 1</label>
+            <input type="number" id="x1" class="span3 control-group" min="-200" max="200" placeholder="x1"></input> <br>
+            <label>Coordenada Ponto 1</label>
+            <input type="number" id="y1" class="span3" min="-200" min="-200" max="200" placeholder="y1"></input><br>
+            <label>Coordenada Ponto 2</label>
+            <input type="number" id="x2" class="span3" min="-200" min="-200" max="200" placeholder="x2"></input> <br>
+            <label>Coordenada Ponto 2</label>
+            <input type="number" id="y2" class="span3" min="-200" max="200" placeholder="y2"></input><br>
+            <button id="calcBTN" class="btn btn-primary mt-3" onclick="clicar();">Calcular</button>
+        </div>
+</body>
+
+</html>
