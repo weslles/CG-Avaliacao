@@ -25,31 +25,44 @@
 <link rel="stylesheet" href="css/custom.css"></link>
 </head>
 
-<body class="p-5 row">
-    <div class="col-6">
-        <div class="container">
-            <h2 class="mb-4">Algoritmo Ponto Médio</h2>
+<body">
+    <nav class="navbar navbar-expand-lg navbar-light p-1 shadow" style="background-color: #11125E;">
+        <a class="text-white navbar-brand m-3" href="#">
+            <img src="/img/dashboard.png" alt="" width="30" height="24">
+            SVG Algorithms
+          </a>
+        <form class="container-fluid d-flex justify-content-center">
+            <h3 class="m-3 text-white">Escolha o algoritmo: </h3>
+            <a href="Bresenham.html" class="btn btn-large btn-outline-primary me-2 rounded-pill">Bresenham</a>
+            <a href="DDA.html" class="btn btn-large btn-outline-primary me-2 rounded-pill">DDA</a>
+            <a href="ponto_medio.html" class="btn btn-large btn-outline-primary me-2 rounded-pill">Ponto Médio</a>
+        </form>
+      </nav>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="mb-4">Algoritmo Ponto Médio</h2>
+                <svg width="400" height="400">
+                    <g id="svg" class="y axis" >
+                        <line x1="200" y1="0" x2="200" y2="400"></line> <!-- Eixo Y -->
+                        <line x1="0" y1="200" x2="400" y2="200"></line> <!-- Eixo X -->
+                    </g>
+                </svg>
+            </div>
+        
+            <div class="col-6 d-flex align-items-center">
+                <div class="well p-3 border border-dark" style="margin-left: 50px;">
+                    <h2> Inserir Centro e Raio</h2>
+                    <label>Coordenada X</label>
+                    <input type="number" id="x" class="span3 control-group" min="-200" max="200" placeholder="x"></input> <br>
+                    <label>Coordenada Y</label>
+                    <input type="number" id="y" class="span3" min="-200" min="-200" max="200" placeholder="y"></input><br>
+                    <label>Raio</label>
+                    <input type="number" id="r" class="span3" min="-200" max="200" placeholder="r"></input><br>
+                    <button id="calcBTN" class="btn btn-primary mt-3" onclick="clicar();">Calcular</button>
+                </div>
         </div>
-
-        <svg width="400" height="400">
-            <g id="svg" class="y axis" >
-                <line x1="200" y1="0" x2="200" y2="400"></line> <!-- Eixo Y -->
-                <line x1="0" y1="200" x2="400" y2="200"></line> <!-- Eixo X -->
-            </g>
-        </svg>
     </div>
-
-    <div class="col-6 d-flex align-items-center">
-        <div class="well p-3 border border-dark" style="margin-left: 50px;">
-            <h2> Inserir Centro e Raio</h2>
-            <label>Coordenada X</label>
-            <input type="number" id="x" class="span3 control-group" min="-200" max="200" placeholder="x"></input> <br>
-            <label>Coordenada Y</label>
-            <input type="number" id="y" class="span3" min="-200" min="-200" max="200" placeholder="y"></input><br>
-            <label>Raio</label>
-            <input type="number" id="r" class="span3" min="-200" max="200" placeholder="r"></input><br>
-            <button id="calcBTN" class="btn btn-primary mt-3" onclick="clicar();">Calcular</button>
-        </div>
 </body>
 
 </html>
