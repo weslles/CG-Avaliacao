@@ -21,6 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="js/circulo_simples.js"></script>
+    <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css"></link>
 <link rel="stylesheet" href="css/custom.css"></link>
 </head>
@@ -35,8 +36,8 @@
             <h3 class="m-3 text-white">Escolha o algoritmo: </h3>
             <a href="Bresenham.html" class="btn btn-large btn-outline-primary me-2 rounded-pill">Bresenham</a>
             <a href="DDA.html" class="btn btn-large btn-outline-primary me-2 rounded-pill">DDA</a>
-            <a href="ponto_medio.html" class="btn btn-large btn-outline-primary me-2 rounded-pill">Ponto Médio</a>
             <a href="circulo_simples.html" class="btn btn-large btn-outline-primary me-2 rounded-pill">Circulo Simples</a>
+            <a href="ponto_medio.html" class="btn btn-large btn-outline-primary me-2 rounded-pill">Ponto Médio</a>
         </form>
       </nav>
     <div class="container p-5">
@@ -47,6 +48,10 @@
                     <g id="svg" class="y axis" >
                         <line x1="200" y1="0" x2="200" y2="400"></line> <!-- Eixo Y -->
                         <line x1="0" y1="200" x2="400" y2="200"></line> <!-- Eixo X -->
+                        <!-- Linha de Gráfico -->
+                        <g id="paint">
+
+                        </g>
                     </g>
                 </svg>
             </div>
@@ -61,6 +66,7 @@
                     <label>Raio</label>
                     <input type="number" id="r" class="span3" min="-200" max="200" placeholder="r"></input><br>
                     <button id="calcBTN" class="btn btn-primary mt-3" onclick="clicar();">Calcular</button>
+                    <button id="cleanBTN" class="btn btn-danger mt-3" onclick="clean();">Limpar</button>
                 </div>
         </div>
     </div>

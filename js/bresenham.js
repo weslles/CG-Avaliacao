@@ -67,7 +67,7 @@ function bresenham(point1, point2) {
 }
 
 function clicar() {
-	let context = document.getElementById("svg")
+	let context = document.getElementById("paint")
 	let x1 = parseInt(document.getElementById("x1").value)
 	let y1 = parseInt(document.getElementById("y1").value)
 	let x2 = parseInt(document.getElementById("x2").value)
@@ -78,4 +78,8 @@ function clicar() {
 	points = bresenham(point1, point2);
 	console.log(points)
 	draw(points, context);
+}
+
+function clean() {
+	$('#paint').empty()
 }

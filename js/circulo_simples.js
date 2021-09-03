@@ -53,7 +53,7 @@ function circleSimple(r, point1) {
 }
 
 function clicar() {
-	let context = document.getElementById("svg")
+	let context = document.getElementById("paint")
 	let x = parseInt(document.getElementById("x").value)
 	let y = parseInt(document.getElementById("y").value)
 	let r = parseInt(document.getElementById("r").value)
@@ -62,4 +62,8 @@ function clicar() {
 	circle = circleSimple(r, point1);
 	console.log(circle)
 	draw(circle, context);
+}
+
+function clean() {
+	$('#paint').empty()
 }

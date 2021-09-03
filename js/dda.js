@@ -49,7 +49,7 @@ function dda(point1, point2) {
 
 /* Pega os valores inseridos pelo usuário para calcular o DDA e Desenhar o gráfico */
 function clicar() {
-	let context = document.getElementById("svg")
+	let context = document.getElementById("paint")
 	let x1 = parseInt(document.getElementById("x1").value)
 	let y1 = parseInt(document.getElementById("y1").value)
 	let x2 = parseInt(document.getElementById("x2").value)
@@ -60,4 +60,8 @@ function clicar() {
 	points = dda(point1, point2);
 	console.log(points)
 	draw(points, point1, context);
+}
+
+function clean() {
+	$('#paint').empty()
 }
